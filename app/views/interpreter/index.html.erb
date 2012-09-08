@@ -1,0 +1,7 @@
+<h1>Interpreter#index</h1>
+<p>Find me in app/views/interpreter/index.html.erb</p>
+<%= form_tag("/run", :method => "post", :class => "form-inline") do %>
+    <%= text_area_tag 'input_code', "Your code here."%>
+    <%= submit_tag("Run") %>
+<% end %>
+<h1><%= @output %></h1>

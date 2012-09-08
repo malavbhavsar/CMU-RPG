@@ -8,16 +8,21 @@ gem 'rails', '3.2.8'
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'
+end
+
+group :test do
   gem 'factory_girl_rails'
-  gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
   gem 'ZenTest'
   gem 'simplecov'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
 end
+
 group :production do
   gem 'pg'
 end

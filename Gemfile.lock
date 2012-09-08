@@ -180,6 +180,7 @@ DEPENDENCIES
   ZenTest
   capybara
   coffee-rails (~> 3.2.1)
+  cucumber
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
