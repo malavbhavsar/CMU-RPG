@@ -1,4 +1,6 @@
 CMURpg::Application.routes.draw do
+  get "interpreter/run"
+
   get "interpreter/index"
 
   # The priority is based upon order of creation:
