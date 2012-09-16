@@ -19,6 +19,13 @@ module NavigationHelpers
       '/run'
     when /^the index page$/
       interpreter_path
+    when /^the players list page$/
+      players_path
+    when /^the user profile page of "(.+)"$/
+      print $1
+      print Player.all
+      print Player.find_by_name($1)
+      player_path(Player.find_by_name($1).id)
 
 
     # Add more mappings here.

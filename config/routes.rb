@@ -1,4 +1,6 @@
 CMURpg::Application.routes.draw do
+  resources :players
+
   get "interpreter/run"
 
   get "interpreter/index"

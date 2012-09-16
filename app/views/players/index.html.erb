@@ -1,0 +1,18 @@
+<h1>Listing players</h1>
+
+<table id="players">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th></th>
+  </tr>
+  <tbody id="playerlist">
+    <% @players.each do |player| %>
+    <tr>
+        <td><%=player.id%></td>
+        <td><%=player.name%></td>
+        <td><%= link_to 'Show', player %></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
