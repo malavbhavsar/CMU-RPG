@@ -16,3 +16,7 @@
 
 #ignore .idea folder
 /.idea
+
+#Also ignore the test folder, I am not using Test::Unit. We will use spec
+#and cucumber
+/test
