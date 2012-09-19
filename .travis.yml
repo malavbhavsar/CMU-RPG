@@ -6,6 +6,6 @@ env:
   - DB=postgresql
 script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate test
-  - RAILS_ENV=test bundle exec rake --trace travis_rspec_cucumber
+  - RAILS_ENV=test bundle exec rake --trace travis
 before_script:
   - psql -c 'create database CMURPG_test' -U postgres
