@@ -6,7 +6,7 @@ postgresql: &postgresql
   adapter: postgresql
   username: postgres
   password:
-  database: CMU-RPG_<%= Rails.env %>
+  database: CMURPG_<%= Rails.env %>
   min_messages: ERROR
 
 defaults: &defaults
