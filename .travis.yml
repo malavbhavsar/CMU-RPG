@@ -9,5 +9,4 @@ script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate test
   - RAILS_ENV=test bundle exec rake --trace travis
 before_script:
-  - RAILS_ENV=test bundle exec rake --trace db:drop test
   - psql -c 'create database CMURPG_test' -U postgres
