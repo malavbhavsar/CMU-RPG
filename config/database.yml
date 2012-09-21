@@ -5,7 +5,6 @@ sqlite: &sqlite
 postgresql: &postgresql
   adapter: postgresql
   username: postgres
-  password:
   database: CMURPG_<%= Rails.env %>
   min_messages: ERROR
 
