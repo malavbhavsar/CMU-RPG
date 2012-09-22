@@ -32,4 +32,4 @@ Feature: Players list
     And I should see "c96821"
     And I should see "gpa 1.775"
     And I should see "code"
-    Then the "code" field should be empty
+    Then the "code_field" field should be empty
