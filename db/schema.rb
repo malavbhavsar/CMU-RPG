@@ -11,12 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120916042054) do
+ActiveRecord::Schema.define(:version => 20120922005044) do
+
+  create_table "codes", :force => true do |t|
+    t.integer  "player_id"
+    t.string   "text",       :limit => 400, :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
 
   create_table "players", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+    t.integer  "energy",       :limit => 100, :default => 100
+    t.integer  "intelligence", :limit => 10,  :default => 0
+    t.integer  "memory",       :limit => 10,  :default => 0
+    t.integer  "experience",   :limit => 10,  :default => 0
+    t.decimal  "c05834",                      :default => 0.0
+    t.decimal  "c14740",                      :default => 0.0
+    t.decimal  "c14741",                      :default => 0.0
+    t.decimal  "c96821",                      :default => 0.0
   end
 
 end

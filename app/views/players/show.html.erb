@@ -1,13 +1,32 @@
 <p id="notice"><%= notice %></p>
-
 <br>
-
 Player ID <%= @player.id %>
-
 <br>
-
 Player Name <%= @player.name %>
-
 <br>
-
+energy <%= @player.energy %>
+<br>
+intelligence <%= @player.intelligence %>
+<br>
+memory <%= @player.memory %>
+<br>
+experience <%= @player.experience %>
+<br>
+c05834 <%= @player.c05834 %>
+<br>
+c14740 <%= @player.c14740 %>
+<br>
+c14741 <%= @player.c14741 %>
+<br>
+c96821 <%= @player.c96821 %>
+<br>
+gpa <%= (@player.c05834 + @player.c14740 + @player.c14741 + @player.c96821)/4.0 %>
+<br>
+<%= form_tag(new_code_path(params[:id]), :method => "post") do %>
+    <%= label_tag('code_label', 'code') %>
+    <!--<%= if @code.nil? then "YES" else @code.text end %>-->
+    <%= text_field_tag('code_field', if @code.nil? then nil else @code.text end) %>
+    <%= submit_tag("Update") %>
+<% end %>
+<br>
 <%= link_to 'Back', players_path %>

@@ -4,13 +4,30 @@
   <tr>
     <th>id</th>
     <th>name</th>
-    <th></th>
+    <th>energy</th>
+    <th>intelligence</th>
+    <th>memory</th>
+    <th>experience</th>
+    <th>c05834</th>
+    <th>c14740</th>
+    <th>c14741</th>
+    <th>c96821</th>
+    <th>gpa</th>
   </tr>
   <tbody id="playerlist">
     <% @players.each do |player| %>
     <tr>
         <td><%=player.id%></td>
         <td><%=player.name%></td>
+        <td><%=player.energy%></td>
+        <td><%=player.intelligence%></td>
+        <td><%=player.memory%></td>
+        <td><%=player.experience%></td>
+        <td><%=player.c05834%></td>
+        <td><%=player.c14740%></td>
+        <td><%=player.c14741%></td>
+        <td><%=player.c96821%></td>
+        <td><%= (player.c05834 + player.c14740 + player.c14741 + player.c96821)/4.0  %></td>
         <td><%= link_to 'Show', player %></td>
     </tr>
     <%end%>

@@ -21,10 +21,12 @@ module NavigationHelpers
       interpreter_path
     when /^the players list page$/
       players_path
-    when /^the user profile page of "(.+)"$/
-      print $1
+    when /^the player profile page of "(.+)"$/
+      print $1 + "\n"
       print Player.all
+      print "\n"
       print Player.find_by_name($1)
+      print "\n"
       player_path(Player.find_by_name($1).id)
 
 

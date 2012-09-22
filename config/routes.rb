@@ -1,5 +1,6 @@
 CMURpg::Application.routes.draw do
   resources :players
+  match '/codes/new/:player_id' => 'codes#create', :as=>:new_code
 
   get "interpreter/run"
 
