@@ -24,8 +24,7 @@ gpa <%= (@player.c05834 + @player.c14740 + @player.c14741 + @player.c96821)/4.0 
 <br>
 <%= form_tag(new_code_path(params[:id]), :method => "post") do %>
     <%= label_tag('code_label', 'code') %>
-    <!--<%= if @code.nil? then "YES" else @code.text end %>-->
-    <%= text_field_tag('code_field', if @code.nil? then nil else @code.text end) %>
+    <%= text_area_tag('code_field', if @code.nil? then nil else @code.text end) %>
     <%= submit_tag("Update") %>
 <% end %>
 <br>

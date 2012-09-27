@@ -53,7 +53,7 @@ Then /^the "([^"]*)" field should be empty$/ do |field|
   field = find_field(field)
   field_value = (field.tag_name == 'textarea') ? field.text : field.value
   if field_value.respond_to? :should
-    field_value.should == nil
+    field_value.should == ""
   else
     assert_match(nil, field_value)
   end
