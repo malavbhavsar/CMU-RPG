@@ -5,6 +5,6 @@ require 'worker'
 
 include Clockwork
 
-every(5.seconds, "Worker ready!") do
+every(5.seconds, "Running codes!") do
   Delayed::Job.enqueue Worker.new
 end

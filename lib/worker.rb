@@ -3,6 +3,13 @@ class Worker
 
   end
   def perform
-    print "Hello ! ! ! ! Is it me you are looking for?"
+    Player.all.each do |p|
+      p.instance_eval do
+        def do_stuff
+          eval(self.codes.last.text)
+        end
+      end
+      p.do_stuff
+    end
   end
 end
