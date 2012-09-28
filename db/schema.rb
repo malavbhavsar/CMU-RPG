@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120927222349) do
+ActiveRecord::Schema.define(:version => 20120928043244) do
 
   create_table "codes", :force => true do |t|
     t.integer  "player_id"

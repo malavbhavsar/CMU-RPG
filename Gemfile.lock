@@ -1,3 +1,18 @@
+GIT
+  remote: git://github.com/collectiveidea/delayed_job_active_record.git
+  revision: bade04ddeb692d102f5e2c094a7b9935c48f82b8
+  specs:
+    delayed_job_active_record (0.3.2)
+      activerecord (>= 2.1.0, < 4)
+      delayed_job (~> 3.0)
+
+GIT
+  remote: https://github.com/collectiveidea/delayed_job
+  revision: 0333bf17109d1ddd3fc86cc758e0725ec76031b1
+  specs:
+    delayed_job (3.0.3)
+      activesupport (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +77,7 @@ GEM
       nokogiri (>= 1.5.0)
     cucumber-rails-training-wheels (1.0.0)
       cucumber-rails (>= 1.1.1)
+    daemons (1.1.9)
     database_cleaner (0.8.0)
     debugger (1.2.0)
       columnize (>= 0.3.1)
@@ -70,11 +86,6 @@ GEM
     debugger-linecache (1.1.2)
       debugger-ruby_core_source (>= 1.1.1)
     debugger-ruby_core_source (1.1.3)
-    delayed_job (3.0.3)
-      activesupport (~> 3.0)
-    delayed_job_active_record (0.3.2)
-      activerecord (> 2.1.0)
-      delayed_job (~> 3.0.0)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -191,9 +202,11 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   cucumber-rails-training-wheels
+  daemons
   database_cleaner
   debugger
-  delayed_job_active_record
+  delayed_job!
+  delayed_job_active_record!
   factory_girl_rails
   jquery-rails
   launchy
